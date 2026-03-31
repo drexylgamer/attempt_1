@@ -1,24 +1,35 @@
-const sphere = new Sphere(500, 500, 50, "red", "black")
+const spheres = [
+  new Sphere(500, 500, 50, 0, 0, 0.9),
+  new Sphere(50, 50, 50, 0, 0, 0.9)
+]
 
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  sphere.update();
-  sphere.draw();
+  spheres.forEach(sphere => {
+    sphere.update(spheres);
+    sphere.draw();
+    sphere.vector();
+  })
+
   requestAnimationFrame(loop);
 }
 
 function init() {
   canvas.width = 1000;
   canvas.height = 1000;
-  loop()
+  loop();
 }
 
-init()
+init();
 
 canvas.addEventListener("mousedown", event => {
-  sphere.mousedown(event);
+  spheres.forEach(sphere => {
+    sphere.mousedown(event);
+  })
 });
 
-canvas.addEventListener("mouseup", event => {
-  sphere.mouseup();
-})
+canvas.addEventListener("mouseup", () => {
+  spheres.forEach(sphere => {
+    sphere.mouseup();
+  })
+});
