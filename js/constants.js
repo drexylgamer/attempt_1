@@ -4,7 +4,7 @@ const gravitySlider = document.getElementById("gravity");
 canvas.width = 1000;
 canvas.height = 1000;
 
-const friction = 0.975;
+const friction = 1;
 
 let gravity = 0;
 

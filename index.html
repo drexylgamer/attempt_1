@@ -10,12 +10,13 @@
 		}
 
 		.font-loader {
-			font-family: 'CanvasFont';
+			font-family: 'CaskaydiaCove';
 			visibility: hidden;
 			position: absolute;
 		}
 
-		html, body {
+		html, body, body {
+			font-family: 'CaskaydiaCove';
 			margin: 0;
 			padding: 0;
 			overflow: hidden;
@@ -37,10 +38,13 @@
 	</style>
 </head>
 <body>
-	<button onclick="addCircle()">Add Circle</button>
-	<button onclick="removeCircle()">Remove Circle</button>
-	<label for="gravity">Gravity</label>
-	<input type="range" id="gravity" min="-10" max="10" value="0">
+	<div class="sidepanel">
+		<button onclick="addCircle()">Add Circle</button><br><br>
+		<button onclick="removeCircle()">Remove Circle</button><br><br>
+		<label for="gravity">Gravity: </label><br><br>
+		<input type="range" id="gravity" min="-10" max="10" value="0">
+	</div>
+	
 	<canvas id="canvas"></canvas>
 	<script src="./js/constants.js"></script>
 	<script src="./js/Sphere.js"></script>
