@@ -24,6 +24,8 @@ class Sphere {
     this.vx*=friction;
     this.vy*=friction;
 
+    this.vy+=gravity;
+
     if (Math.abs(this.vx) < 0.1) this.vx = 0;
     if (Math.abs(this.vy) < 0.1) this.vy = 0;
     

@@ -80,6 +80,7 @@ function handleCollisions(spheres) {
 
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  gravity = Number(gravitySlider.value)
   spheres.forEach(sphere => {
     sphere.update();
     handleCollisions(spheres)

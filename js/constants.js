@@ -1,9 +1,12 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
+const gravitySlider = document.getElementById("gravity");
 canvas.width = 1000;
 canvas.height = 1000;
 
 const friction = 0.975;
+
+let gravity = 0;
 
 function getRandomIntInclusive(min, max) {
   const minCeiled = Math.ceil(min);
