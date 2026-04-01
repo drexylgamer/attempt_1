@@ -4,6 +4,17 @@
 	<title>Physic Simulation | Attempt 1</title>
 	<link rel="shortcut icon" href="Circle_-_black_simple.svg.png" type="image/x-icon">
 	<style>
+		@font-face {
+			font-family: "CaskaydiaCove";
+			src: url("./CaskaydiaMonoNerdFontMono-Regular.ttf");
+		}
+
+		.font-loader {
+			font-family: 'CanvasFont';
+			visibility: hidden;
+			position: absolute;
+		}
+
 		html, body {
 			margin: 0;
 			padding: 0;
@@ -26,6 +37,8 @@
 	</style>
 </head>
 <body>
+	<button onclick="addCircle()">Add Circle</button>
+	<button onclick="removeCircle()">Remove Circle</button>
 	<canvas id="canvas"></canvas>
 	<script src="./js/constants.js"></script>
 	<script src="./js/Sphere.js"></script>
